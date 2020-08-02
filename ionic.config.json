@@ -1,0 +1,8 @@
+{
+  "name": "MacroLayout",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+    }
+    

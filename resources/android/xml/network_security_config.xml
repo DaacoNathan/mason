@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+<base-config cleartextTrafficPermitted="true">
+       <trust-anchors>
+           <certificates src="system" />
+       </trust-anchors>
+   </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://node.launchcentre.com/add_ctr</domain>
+    </domain-config>
+        <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://139.99.68.162:5001</domain>
+    </domain-config>
+      <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://139.99.68.162:50000</domain>
+    </domain-config>
+    
+</network-security-config>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Report
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding>
+
+    <ion-item>
+        <ion-label>Type Of Incident</ion-label>
+        <ion-select value="notifications" interface="action-sheet">
+          <ion-select-option value="Road Accident" name="">Road Accident</ion-select-option>
+          <ion-select-option value="Theft" name="">Theft</ion-select-option>
+          <ion-select-option value="Medical Assitance" name="">Medical Assistance</ion-select-option>
+          <ion-select-option value="Fire" name="">Fire</ion-select-option>
+        </ion-select>
+      </ion-item>r
+      <ion-item>
+          Incident Photo
+          <ion-img [src]="currentIDPhoto" *ngIf="currentIDPhoto" (click)="takePicture()" style="margin-left: auto;">
+          </ion-img>
+        </ion-item>
+        <div style="text-align: center">
+ <ion-button href="/tabs/tabs/tab3">
+   Submit
+ </ion-button>
+</div>
+</ion-content>

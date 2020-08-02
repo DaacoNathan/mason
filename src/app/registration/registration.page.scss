@@ -1,0 +1,65 @@
+.login-content{
+    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+  }
+    
+    
+  
+  label#rounded{
+    border-radius:15px; 
+  }
+  
+  div#container{
+    width: 300px; 
+    margin-left:auto; 
+    margin-right: auto; 
+  }
+  
+  
+  
+    .logo {
+      color: white;
+      font-size: 64px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 50px;
+    }
+    
+    .description {
+      color: rgb(0, 0, 0);
+      font-size: 22px;
+      text-align: center;
+      font-family: 'Trebuchet MS';
+    }
+    
+    .description2 {
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      font-family: 'Trebuchet MS';
+      text-align: center;
+    }
+    
+    .log-fb-button {
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    .log-google-button {
+      margin-top: 0px;
+      font-weight: bold;
+    }
+     
+    ion-input {
+      input {
+        text-align: right;
+        ::-webkit-input-placeholder {
+          text-align: right;
+        }
+      }
+    }
+    ion-img{
+      height: 150px;
+      width: 150px;
+      margin: auto;
+    }
+
+  

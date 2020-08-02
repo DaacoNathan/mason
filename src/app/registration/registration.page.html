@@ -1,0 +1,138 @@
+<ion-header style="background-color: black; color: white; padding-bottom: 1%; padding-top: 1%;">
+  <ion-row>
+       <ion-button fill="clear" style="color: white;">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-button>
+      <ion-title style="margin: auto;">Registration</ion-title>
+  </ion-row>
+  </ion-header>
+<ion-content class="login-content bg-class" padding>
+    <ion-card style="margin-left: 2px; background-color: white;"> 
+      <ion-card-content style="color: black">
+     <ion-card-title style="padding-top: 1%; padding-bottom: 1%;">
+       Full Name
+     </ion-card-title>
+     <form [formGroup]="loginForm">
+  <ion-item>
+      <ion-label position="floating" color="dark" >First Name</ion-label>
+      <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="firstname" (click)="onClickFirstName()"></ion-input>
+    
+  </ion-item>
+  <p style="color:red; margin-top:1%;" *ngIf="validFirstName"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter A Valid Name!</p>
+  <ion-item>
+      <ion-label position="floating" color="dark">Last Name</ion-label>
+      <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="lastname" (click)="onClickLastName()"></ion-input>
+  </ion-item>
+  <p style="color:red; margin-top:1%;" *ngIf="validLastName"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter A Valid Name!</p>
+  
+  <ion-item >
+      <ion-label position="floating" color="dark">Middle Name</ion-label>
+      <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="middlename" (click)="onClickMiddleName()"></ion-input>
+  </ion-item>
+  <p style="color:red; margin-top:1%;" *ngIf="validMiddleName"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter A Valid Name!</p>
+  
+</form>
+</ion-card-content>
+</ion-card>
+
+<!-- Address -->
+<ion-card style="margin-left: 2px; background-color: white;"> 
+    <ion-card-content style="color: black">
+   <ion-card-title style="padding-top: 1%; padding-bottom: 1%;">
+     Address
+   </ion-card-title>
+   <form [formGroup]="loginForm">
+<ion-item>
+    <ion-label position="floating" color="dark" >Street</ion-label>
+    <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="streetname" (click)="onClickStreet()"></ion-input>
+</ion-item>
+<p style="color:red; margin-top:1%;" *ngIf="validStreet"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter Street Name!</p>
+<ion-item>
+    <ion-label position="floating" color="dark">Barangay</ion-label>
+    <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="barangayname" (click)="onClickBarangay()"></ion-input>
+</ion-item>
+<p style="color:red; margin-top:1%;" *ngIf="validBarangay"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter Barangay Name!</p>
+
+<ion-item >
+    <ion-label position="floating" color="dark">House/Unit No.</ion-label>
+    <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="unitname" (click)="onClickHouseNo()"></ion-input>
+</ion-item>
+<p style="color:red; margin-top:1%;" *ngIf="validUnit"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter House No.!</p>
+
+<ion-item >
+    <ion-label position="floating" color="dark">City</ion-label>
+    <ion-input type="text" [required]="true" color="dark" inputmode="text" formControlName="cityname" (click)="onClickCity()"></ion-input>
+</ion-item>
+<p style="color:red; margin-top:1%;" *ngIf="validCity"> <ion-icon name="information-circle-outline"></ion-icon> Please Enter City!</p>
+</form>
+</ion-card-content>
+</ion-card>
+<!-- Others -->
+<ion-card style="margin-left: 2px; background-color: white;"> 
+  <ion-card-content style="color: black">
+ <ion-card-title style="padding-top: 1%; padding-bottom: 1%;">
+  Others
+ </ion-card-title>
+ <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select value="notifications" interface="action-sheet">
+      <ion-select-option value="Male">Male</ion-select-option>
+      <ion-select-option value="Female">Female</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-label>Birthdate</ion-label>
+      <ion-datetime value="" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>Register as:</ion-label>
+
+        <ion-select value="notifications" interface="action-sheet" [(ngModel)]="regAs" (ionChange)="showSelectValue(regAs)">
+          <ion-select-option value="Seeker" name="">Seeker</ion-select-option>
+          <ion-select-option value="Provider">Provider</ion-select-option>
+        </ion-select>
+      </ion-item>
+</ion-card-content>
+</ion-card>
+<!-- 
+Provider Details -->
+<ion-card style="margin-left: 2px; background-color: white;" *ngIf="providerInfo">
+    <ion-card-content style="color: black">
+    <ion-card-title style="padding-top: 1%; padding-bottom: 1%;">
+      ID
+    </ion-card-title>
+    <ion-item>
+      <ion-label>ID Type</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="SSS">SSS</ion-select-option>
+        <ion-select-option value="TIN">TIN ID</ion-select-option>
+        <ion-select-option value="DL">Driver's License</ion-select-option>
+        <ion-select-option value="Postal">Postal ID</ion-select-option>
+        <ion-select-option value="UMID">UMID ID</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="dark">ID Number</ion-label>
+      <ion-input type="text" [required]="true" color="dark" inputmode="text"></ion-input>
+    </ion-item>
+    <ion-item>
+    ID PHOTO
+    <ion-img [src]="currentIDPhoto" *ngIf="currentIDPhoto" (click)="takePicture()" style="margin-left: auto;">
+    </ion-img>
+  </ion-item>
+  <ion-item>
+    Handheld ID 
+    <ion-img [src]="currentIDHandheld" *ngIf="currentIDHandheld" (click)="takePicture2()" style="margin: auto;">
+    </ion-img>
+  </ion-item>
+  </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col>
+      <ion-button class="log-google-button" color="danger" expand="block" (click)="onRegister()">
+        Register
+        <ion-icon name="arrow-round-forward" style="position: absolute; right: 5%;"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

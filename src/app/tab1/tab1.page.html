@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="margin-left: 20px;">
+ Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content ion-padding>
+  <ion-card>
+ 
+    <ion-card-header>
+    <ion-card-title style="margin: 2%; text-align: center; background-color: whitesmoke">Events</ion-card-title>
+    </ion-card-header>
+    
+  </ion-card>   
+  <ion-card *ngFor="let event of eventData;">
+    <img [src]="event.picture"/>
+    <ion-card-header>
+      <ion-card-subtitle style="margin: 2%; color: royalblue"><ion-icon name="pin"></ion-icon>{{event.location}}</ion-card-subtitle >
+      <ion-card-title style="margin: 2%;">{{event.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{event.description}}
+    </ion-card-content>
+    <br>
+    <ion-label style="position: absolute; right: 0; bottom: 0; margin-right: 2%; margin-bottom: 2%; color: royalblue;">
+      More Info <ion-icon name="arrow-forward"></ion-icon>
+    </ion-label>
+  </ion-card>    
+</ion-content>
+  

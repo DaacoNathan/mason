@@ -1,0 +1,48 @@
+
+<ion-content>
+  
+
+
+
+  <div id='map'>
+     <div style="z-index: 1001; position:fixed; right: 0; top:0; margin-right:2%; margin-top:2%;"> 
+        <ion-fab-button size="small" color="light" (click)="refreshNearby()">
+            <img src="assets/images/refresh.png" style="width: 80%; height:80%">
+        </ion-fab-button>
+
+      
+     
+      </div>
+    
+    
+    
+  </div>
+ 
+  </ion-content>
+  <footer>
+ 
+      <ion-item>
+          <ion-label>Options</ion-label>
+          <ion-select value="notifications" interface="action-sheet" [(ngModel)]="regAs" (ionChange)="showSelectValue(regAs)">
+            <ion-select-option value="Show">Show Nearby Members</ion-select-option>
+            <ion-select-option value="DoNotShow">Do Not Show Nearby Members</ion-select-option>
+         
+          </ion-select>
+        
+        </ion-item>
+        <ion-item *ngIf="filterByOc">
+          <ion-label>Filter By Occupation</ion-label>
+          <ion-select [(ngModel)]="occup" (ionChange)="filterByOccupation(occup)">
+            <ion-select-option value="Attorney">Attorney</ion-select-option>
+            <ion-select-option value="Police">Police</ion-select-option>
+            <ion-select-option value="None">None</ion-select-option>
+          </ion-select>
+        </ion-item>
+            <ion-item lines="none">
+                <ion-label>  Show Me On Nearby Members</ion-label>
+                <ion-checkbox color="primary"  slot="start" [(ngModel)]="showMe" (ionChange)="showMeOnNearby(showMe)"></ion-checkbox>
+             
+              </ion-item>
+           
+  </footer>
+  

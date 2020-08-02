@@ -1,0 +1,88 @@
+<!-- <ion-content class="login-content bg-class" padding>
+  <ion-row>
+    <ion-col>
+      <ion-img src="/assets/img/mlogo.png"></ion-img>
+      <p class="description">Mason</p>
+    </ion-col>
+  </ion-row>
+  <p class="description2">Welcome! Please Login.</p>
+  <br>
+  <ion-card style="background-color:white">
+    <ion-card-content>
+      <ion-item style="border-radius: 15px;">
+          <ion-label position="floating" color="dark" >Username</ion-label>
+          <ion-input color="dark" inputmode="text" [(ngModel)]="username">  <ion-icon name="person" style="position: absolute; right:0%; size:auto;"></ion-icon></ion-input>
+        
+      </ion-item>
+      <ion-item style="border-radius: 15px;">
+          <ion-label position="floating" color="dark" >Password</ion-label>
+        <ion-input color="dark" type="password" [(ngModel)]="password"> <ion-icon name="lock" style="position: absolute; right:0%; size:auto;"></ion-icon></ion-input>
+    </ion-item>
+    </ion-card-content>
+    </ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-button class="log-fb-button" color="primary" expand="block" (click)="login()">
+            LOG IN
+            <ion-icon name="arrow-round-forward" style="margin-left: 10px"></ion-icon>
+          </ion-button> 
+        </ion-col>
+      </ion-row>
+</ion-content> -->
+
+
+
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-26">
+						Welcome
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
+<!-- 
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c"> -->
+            <div class="wrap-input100 ">
+						<input class="input100" type="text" name="email" [(ngModel)]="username">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 " data-validate="Enter password">
+						<span class="btn-show-pass" >
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass" [(ngModel)]="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" (click)="login()">
+								Login
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Can't Login? 
+						</span>
+
+						<a class="txt2" href="#">
+							Contact your Administrator
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+</body>

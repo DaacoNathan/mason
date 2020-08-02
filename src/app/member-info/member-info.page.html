@@ -1,0 +1,86 @@
+  <ion-content class="login-content bg-class" padding>
+       
+      <div class="containers">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+              <defs>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff6e7f;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#bfe9ff;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+            <path d="M0,200 C150,400 500,100 700,500 L500,00 L0,0 Z" style="stroke: none; fill:url(#grad2);"></path>
+          </svg>
+      
+      <ion-row>
+          <ion-col>
+              <ion-icon name="help-circle-outline" style="position: absolute; right: 0; margin:auto;"></ion-icon>
+            </ion-col>
+          </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-card style="background-color:white; border-radius: 50%; width: 55%; margin: auto; margin-top:20%">
+              <ion-card-content>
+              <ion-avatar style="width:100% !important;  
+              height : 100% !important;  
+              max-width: 200px !important;
+              max-height: 200px !important;
+              margin: auto;"> 
+                <img [src]="picture" >
+              </ion-avatar>
+            </ion-card-content>
+          </ion-card>
+            </ion-col>
+          </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="background-color:white">
+          <ion-card-content>
+        <p class="description" style="text-align: center;"><ion-icon name="card"></ion-icon> Member No: {{memberID}}</p>
+      </ion-card-content>
+    </ion-card>
+      </ion-col>
+    </ion-row>
+    <br>
+  
+    <ion-card style="background-color:white">
+      <ion-card-content>
+        <ion-item style="border-radius: 15px;">
+            <ion-label color="dark" ><ion-icon name='contact'></ion-icon><b> Name:</b> {{name}}</ion-label>
+        </ion-item>
+        <ion-item style="border-radius: 15px;">
+            <ion-label color="dark" ><ion-icon name='call'></ion-icon><b> Contact No:</b> {{contact}}</ion-label>
+        </ion-item>
+        <ion-item style="border-radius: 15px;">
+            <ion-label color="dark" ><ion-icon name='build'></ion-icon><b> Occupation:</b> {{occupation}}</ion-label>
+        </ion-item>
+        <ion-item style="border-radius: 15px;">
+            <ion-label color="dark" ><ion-icon name="calendar"></ion-icon><b> Member Since:</b> {{membersince}}</ion-label>
+        </ion-item>
+        <ion-item style="border-radius: 15px;">
+          <ion-label color="dark" ><ion-icon name="star"></ion-icon><b> Rating:</b>
+            
+              <ion-icon name="star" style="color: yellow; margin-left: 5%; font-size: 30px; margin-top: 1%; position:relative;"></ion-icon>
+              <ion-icon name="star" style="color: yellow; font-size: 30px; margin-top: 1%; position:relative;"></ion-icon>
+              <ion-icon name="star" style="color: yellow; font-size: 30px; margin-top: 1%; position:relative;"></ion-icon>
+              <ion-icon name="star" style="color: yellow; font-size: 30px; margin-top: 1%; position:relative;"></ion-icon>
+              <ion-icon name="star" style="color: yellow; font-size: 30px; margin-top: 1%; position:relative;"></ion-icon>
+            
+ 
+          
+          </ion-label>
+      </ion-item>
+      </ion-card-content>
+      </ion-card>
+     
+      </div>
+      <div style="position:relative;
+      width:100%;
+      bottom:0;
+      margin-bottom: 10%;">
+      <div style="text-align: center;">
+      <ion-button (click)="goback()">
+          Go Back
+        </ion-button>
+        </div>
+        </div>
+  </ion-content>
